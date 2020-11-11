@@ -22,3 +22,5 @@ files {
     'common/**/*.lua',
     'client/**/*.lua'
 }
+
+dependency 'vrp'
