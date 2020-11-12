@@ -15,7 +15,7 @@
 https://discord.gg/z6Yx9A8VDR
 
 ## Overview
-Um resource [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0) para [FiveM](http://fivem.net/) quem cria itens relacionados a props.
+`vrp_worlditems` é um resource [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0) para [FiveM](http://fivem.net/) que cria itens relacionados a props.
 
 [![Showcase](https://yt-embed.herokuapp.com/embed?v=je4q3Ym9Up4)](https://youtu.be/je4q3Ym9Up4)
 

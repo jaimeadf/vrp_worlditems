@@ -14,8 +14,10 @@
 
 https://discord.gg/z6Yx9A8VDR
 
+You can also read this README in [Portuguese](https://github.com/jaimeadf/vrp_worlditems/blob/master/README.pt.md).
+
 ## Overview
-A [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0) resource for [FiveM](http://fivem.net/) that creates items related to props.
+`vrp_worlditems` is a [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0) resource for [FiveM](http://fivem.net/) that creates items related to props.
 
 [![Showcase](https://yt-embed.herokuapp.com/embed?v=je4q3Ym9Up4)](https://youtu.be/je4q3Ym9Up4)
 
@@ -61,7 +63,7 @@ Arguments:
 #### getWorldItems()
 Returns a list with all the [world items](#world-item-payload).
 
-#### World Item Payload
+## World Item Payload
 * **id**: string
 * **idName**: string
 * **name**: string
