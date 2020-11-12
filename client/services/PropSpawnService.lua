@@ -11,7 +11,7 @@ function PropSpawnService:start()
     end
 end
 
-function PropSpawnService:spawnProp(model, position, place_on_ground, freeze)
+function PropSpawnService:spawnProp(model, position, place_on_ground)
     local model_hash = ModelUtils.parseModel(model)
     if ModelUtils.loadModel(model_hash) then
         local entity_id = CreateObject(model_hash, position.x, position.y, position.z, true, true, true)
@@ -19,6 +19,7 @@ function PropSpawnService:spawnProp(model, position, place_on_ground, freeze)
         SetModelAsNoLongerNeeded(model_hash)
 
         FreezeEntityPosition(entity_id, true)
+        SetEntityCollision(entity_id, false, true)
 
         if place_on_ground then
             PlaceObjectOnGroundProperly(entity_id)
