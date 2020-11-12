@@ -20,4 +20,3 @@ local world_item_manager = WorldItemManager()
 
 local world_item_controller = WorldItemController(config, item_manager, prop_manager, world_item_manager)
 world_item_controller:start()
-
