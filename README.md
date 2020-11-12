@@ -14,6 +14,11 @@
 
 https://discord.gg/z6Yx9A8VDR
 
+## Overview
+A [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0) resource for [FiveM](http://fivem.net/) that creates items related to props.
+
+[![Showcase](https://yt-embed.herokuapp.com/embed?v=je4q3Ym9Up4)](https://youtu.be/je4q3Ym9Up4)
+
 ## Installation
 
 1. Make sure you artifacts ([windows](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) or [linux](https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master)) are up to date.
@@ -23,7 +28,40 @@ https://discord.gg/z6Yx9A8VDR
 
 ## API
 
-### Structure of a World Item
+### Server
+
+#### createWorldItem(player, item_id_name, item_amount, position)
+Creates a [world item](#world-item-payload) in the specified position or, if not passed, in the current player's position and returns it.
+
+Arguments:
+* **player**: number
+* **item_id_name**: string
+* **item_amount**: number
+* **position**: vector3
+
+#### deleteWorldItem(id)
+Delete the [world item](#world-item-payload) with the specified id.
+
+Arguments:
+* **id**: string
+
+#### updateWorldItemAmount(id, amount)
+Update the [world item](#world-item-payload) amount with the specified id.
+
+Arguments:
+* **id**: string
+* **amount**: number
+
+#### getWorldItem(id)
+Returns a [world item](#world-item-payload) with the specified id or `nil` if not found.
+
+Arguments:
+* **id**: string
+
+#### getWorldItems()
+Returns a list with all the [world items](#world-item-payload).
+
+#### World Item Payload
 * **id**: string
 * **idName**: string
 * **name**: string
@@ -34,39 +72,6 @@ https://discord.gg/z6Yx9A8VDR
     * **entityId**: number
     * **networkId**: number
     * **position**: vector3
-
-### Server
-
-#### createWorldItem(player, item_id_name, item_amount, position)
-Creates a [world item](#structure-of-a-world-item) in the specified position or, if not passed, in the current player's position and returns it.
-
-Arguments:
-* **player**: number
-* **item_id_name**: string
-* **item_amount**: number
-* **position**: vector3
-
-#### deleteWorldItem(id)
-Delete the [world item](#structure-of-a-world-item) with the specified id.
-
-Arguments:
-* **id**: string
-
-#### updateWorldItemAmount(id, amount)
-Update the [world item](#structure-of-a-world-item) amount with the specified id.
-
-Arguments:
-* **id**: string
-* **amount**: number
-
-#### getWorldItem(id)
-Returns a [world item](#structure-of-a-world-item) with the specified id or `nil` if not found.
-
-Arguments:
-* **id**: string
-
-#### getWorldItems()
-Returns a list with all the [world items](#structure-of-a-world-item).
 
 ## Dependencies
 * [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0)
