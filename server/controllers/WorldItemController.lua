@@ -9,7 +9,7 @@ local function remove_client_world_item(player, world_item)
     Client._removeWorldItem(player, world_item.id)
 end
 
-local WorldItemController =class(function(self, config, item_manager, prop_manager, world_item_manager)
+local WorldItemController = class(function(self, config, item_manager, prop_manager, world_item_manager)
     self.config = config
     self.items = item_manager
     self.props = prop_manager
@@ -120,6 +120,7 @@ function WorldItemController:takeNearestWorldItem(player)
                 self:updateWorldItemAmount(world_item.id, world_item.amount - take_amount)
             else
                 vRPclient._notify(player, '~r~Inventory full')
+                TriggerClientEvent('Notify', player, 'negado', 'Inventário cheio')
             end
         end
     end
