@@ -16,7 +16,9 @@ function PropManager:create(player, model, position, place_on_ground)
 end
 
 function PropManager:delete(prop)
-    DeleteEntity(prop.entityId)
+    if DoesEntityExist(prop.entityId) then
+        DeleteEntity(prop.entityId)
+    end
 end
 
 return PropManager
