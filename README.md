@@ -23,7 +23,7 @@ You can also read this README in [Portuguese](https://github.com/jaimeadf/vrp_wo
 
 ## Installation
 
-1. Make sure you artifacts ([windows](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) or [linux](https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master)) are up to date.
+1. Make sure your artifacts ([windows](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) or [linux](https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master)) are up to date and `onesync` is activated.
 2. Download the latest zip file at [releases](https://github.com/jaimeadf/vrp_worlditems/releases) and extract it at your resources folder.
 3. Add `ensure vrp_worlditems` in your `server.cfg`.
 4. Configure the item models and the despawn time in the `config.json` file.
@@ -41,11 +41,27 @@ Arguments:
 * **item_amount**: number
 * **position**: vector3
 
+Example:
+```lua
+local world_item = exports['vrp_worlditems']:createWorldItem(GetPlayers()[1], 'donut', 3, vector3(393.26, -1813.78, 28.99))
+print(json.encode(world_item, {
+    indent = true
+}))
+```
+
 #### deleteWorldItem(id)
 Delete the [world item](#world-item-payload) with the specified id.
 
 Arguments:
 * **id**: string
+
+Example:
+```lua
+local world_item = exports['vrp_worlditems']:createWorldItem(GetPlayers()[1], 'donut', 3)
+SetTimeout(15000, function () 
+    exports['vrp_worlditems']:deleteWorldItem(world_item.id)
+end)
+```
 
 #### updateWorldItemAmount(id, amount)
 Update the [world item](#world-item-payload) amount with the specified id.
@@ -54,14 +70,38 @@ Arguments:
 * **id**: string
 * **amount**: number
 
+Example:
+```lua
+local world_item = exports['vrp_worlditems']:createWorldItem(GetPlayers()[1], 'donut', 3)
+SetTimeout(5000, function () 
+    exports['vrp_worlditems']:updateWorldItemAmount(world_item.id, 10)
+end)
+```
+
 #### getWorldItem(id)
 Returns a [world item](#world-item-payload) with the specified id or `nil` if not found.
 
 Arguments:
 * **id**: string
 
+Example:
+```lua
+local world_item = exports['vrp_worlditems']:getWorldItem('0e2a7230-407f-4cc6-8aab-c490c0deb876')
+print(json.encode(world_item, {
+    indent = true
+}))
+```
+
 #### getWorldItems()
 Returns a list with all the [world items](#world-item-payload).
+
+Example:
+```lua
+local world_items = exports['vrp_worlditems']:getWorldItems()
+print(json.encode(world_items, {
+    indent = true
+}))
+```
 
 ## World Item Payload
 * **id**: string
