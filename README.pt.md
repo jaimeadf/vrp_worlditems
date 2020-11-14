@@ -116,6 +116,11 @@ print(json.encode(world_items, {
 ## Dependências
 * [vRP](https://github.com/ImagicTheCat/vRP/tree/1.0)
 
+## Saudações
+- [Matheus Rodrigues](https://github.com/Muulfz) - Infrastructure and Code Review
+- [Marco](https://github.com/marcodsl) - Code Review
+- [UtinhaSz](https://github.com/UtinhaSz) - Testing
+
 ## Issues
 
 Reporte qualquer problema que tiver e tente fornecer todas as informações sobre ele.
