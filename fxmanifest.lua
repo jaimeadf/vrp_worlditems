@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Jaime Filho <https://github.com/jaimeadf>'
 description 'A vRP resource for FiveM and RedM that create items in the world'
-version '1.0.1'
+version '1.0.2'
 url 'https://github.com/jaimeadf/vrp_worlditems'
 
 server_scripts {
