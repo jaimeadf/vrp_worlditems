@@ -7,6 +7,7 @@
             if entity_id ~= 0 then
                 return entity_id
             end
+            Wait(100)
         end
     end
 
