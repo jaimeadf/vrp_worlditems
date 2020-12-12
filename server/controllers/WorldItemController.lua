@@ -33,7 +33,8 @@ function WorldItemController:start()
         return self:getWorldItems(...)
     end)
 
-    RegisterCommand('takeworlditem', function(source)
+    RegisterServerEvent('vrp_worlditems:takeNearestWorldItem')
+    AddEventHandler('vrp_worlditems:takeNearestWorldItem', function ()
         self:takeNearestWorldItem(source)
     end)
 

@@ -19,6 +19,10 @@ function WorldItemService:start()
 
     RegisterKeyMapping('takeworlditem', 'Take a world item', 'keyboard', 'e')
 
+    RegisterCommand('takeworlditem', function ()
+        TriggerServerEvent('vrp_worlditems:takeNearestWorldItem')
+    end)
+
     CreateThread(function ()
         while true do
             Wait(0)
